@@ -1,0 +1,3 @@
+# Boceto: no indexar hasta pasar las compuertas de lanzamiento (ver lineamientos).
+User-agent: *
+Disallow: /
