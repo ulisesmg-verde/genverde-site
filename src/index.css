@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: auto; -webkit-text-size-adjust: 100%; }
+body { background: #f5f0ea; margin: 0; }
+::selection { background: #4ead42; color: #fff; }
+:focus-visible { outline: 2px solid #4ead42; outline-offset: 3px; }
