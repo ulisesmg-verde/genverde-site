@@ -6,3 +6,10 @@ html { scroll-behavior: auto; -webkit-text-size-adjust: 100%; }
 body { background: #f5f0ea; margin: 0; }
 ::selection { background: #4ead42; color: #fff; }
 :focus-visible { outline: 2px solid #4ead42; outline-offset: 3px; }
+
+/* Zoom suave en fotos al pasar el cursor (mismo efecto que "Lo que hacemos").
+   Aplica a cualquier imagen dentro de un contenedor con overflow-hidden; la galería acordeón del home queda fuera. */
+main .overflow-hidden > img { transition: transform .7s cubic-bezier(.4, 0, .2, 1); }
+main .overflow-hidden:hover > img { transform: scale(1.05); }
+@media (prefers-reduced-motion: reduce) { main .overflow-hidden:hover > img { transform: none; } }
+.no-scrollbar { scrollbar-width: none; } .no-scrollbar::-webkit-scrollbar { display: none; }

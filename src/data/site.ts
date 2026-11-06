@@ -12,8 +12,8 @@ export const imgMd = (name: string) => EMBED[`${name}-md.webp`] ?? `${BASE}img/$
 export const logo = (variant: 'h-dark' | 'h-light' | 'v-dark' | 'v-light') => EMBED[`logo-${variant}.png`] ?? `${BASE}img/logo-${variant}.png`;
 
 export const CONTACT = {
-  phone: '+52 55 3436 7904',
-  phoneHref: 'tel:+525534367904',
+  phone: '+52 55 2921 9645',
+  phoneHref: 'https://wa.me/525529219645',
   whatsapp: 'https://wa.me/525529219645',
   address: 'Eleuterio Méndez 27, San Simón Ticumac, Benito Juárez, CDMX',
   offices: ['CDMX', 'Guadalajara', 'Mérida'],

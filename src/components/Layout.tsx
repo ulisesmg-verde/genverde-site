@@ -1,5 +1,5 @@
 import { useEffect, useState, type ReactNode } from 'react';
-import { X, MessageCircle, Phone, ArrowUpRight, Plus, Minus } from 'lucide-react';
+import { X, MessageCircle, ArrowUpRight, Plus, Minus } from 'lucide-react';
 import { Link, useRouter } from '../router';
 import { CONTACT, NAV, SERVICES, logo, waLink, type Faq } from '../data/site';
 
@@ -126,12 +126,9 @@ export function ContactDock({ message = 'Hola, me interesa cotizar un proyecto c
       >
         <MessageCircle size={26} />
       </a>
-      <div className="fixed inset-x-0 bottom-0 z-50 grid grid-cols-2 gap-px bg-bosque/20 md:hidden">
-        <a href={CONTACT.phoneHref} className="flex items-center justify-center gap-2 bg-papel py-3.5 text-sm font-semibold text-bosque" data-event="click_call">
-          <Phone size={16} /> Llamar
-        </a>
+      <div className="fixed inset-x-0 bottom-0 z-50 md:hidden">
         <a href={waLink(message)} target="_blank" rel="noopener" className="flex items-center justify-center gap-2 bg-hoja py-3.5 text-sm font-semibold text-white" data-event="click_whatsapp">
-          <MessageCircle size={16} /> WhatsApp
+          <MessageCircle size={16} /> WhatsApp {CONTACT.phone}
         </a>
       </div>
     </>
@@ -205,7 +202,7 @@ export function Footer() {
         <div>
           <p className="mb-4 text-xs font-semibold uppercase tracking-[0.14em] text-hoja">Contacto</p>
           <address className="space-y-2.5 text-sm not-italic text-piedra/75">
-            <a href={CONTACT.phoneHref} className="block hover:text-white">{CONTACT.phone}</a>
+            <a href={waLink('Hola, quiero información sobre sus servicios.')} target="_blank" rel="noopener" className="flex items-center gap-2 hover:text-white" data-event="click_whatsapp"><MessageCircle size={16} className="text-hoja" /> WhatsApp {CONTACT.phone}</a>
             <p>{CONTACT.address}</p>
             <p>Oficinas: {CONTACT.offices.join(' · ')}</p>
           </address>

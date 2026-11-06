@@ -58,7 +58,7 @@ export default function Quote() {
               <div className="mt-10 rounded-2xl bg-white p-8">
                 <span className="flex h-12 w-12 items-center justify-center rounded-full bg-hoja text-white"><Check /></span>
                 <h2 className="mt-5 font-display text-2xl font-bold text-grafito">¡Gracias, {name.split(' ')[0]}!</h2>
-                <p className="mt-2 text-grafito/70">Abrimos WhatsApp con tus datos. Si no se abrió, llámanos al <a className="text-bosque underline" href={CONTACT.phoneHref}>{CONTACT.phone}</a>.</p>
+                <p className="mt-2 text-grafito/70">Abrimos WhatsApp con tus datos. Si no se abrió, escríbenos por WhatsApp al <a className="text-bosque underline" href={CONTACT.phoneHref} target="_blank" rel="noopener">{CONTACT.phone}</a>.</p>
               </div>
             ) : (
               <form onSubmit={submit} className="mt-10">
